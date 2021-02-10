@@ -1,7 +1,7 @@
 let subMenu = document.querySelector('.second-nav__submenu');
 let menuItem = document.querySelector('.second-nav-list__item');
 menuItem.onclick = function() {
-  subMenu.classList.toggle('dont-show')
+  subMenu.classList.toggle('toggle-visibility');
 }
 
 var mySwiper = new Swiper('.swiper-container', {
