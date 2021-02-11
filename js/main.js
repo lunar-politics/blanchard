@@ -1,8 +1,9 @@
-let subMenu = document.querySelector('.second-nav__submenu');
-let menuItem = document.querySelector('.second-nav-list__item');
-menuItem.onclick = function() {
-  subMenu.classList.toggle('toggle-visibility');
-}
+const menuItem = document.querySelectorAll('.second-nav__item');
+menuItem.forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.currentTarget.closest('li').querySelector('.second-nav__submenu').classList.toggle('toggle-visibility');
+  });
+});
 
 var mySwiper = new Swiper('.swiper-container', {
   autoHeight: false,

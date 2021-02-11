@@ -71,11 +71,7 @@ h2 {
     background-image: url('../img/hero-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    animation: hero 15s ease-in-out infinite;
-}
-
-.toggle-visibility {
-    display: block;
+    animation: hero 40s ease-in-out infinite;
 }
 
 .burger {
@@ -185,14 +181,15 @@ h2 {
     padding: 2px 20px 2px 2px;
 }
 
-.second-nav-list__item:focus {
-    outline: 2px solid var(--active);
-}
-
-.second-nav__item {    
+.second-nav__item {  
+    padding-right: 20px;  
     color: var(--usu);
     font-size: 18px;
     transition: color 0.3s;
+}
+
+.second-nav__item:focus {
+    outline: 2px solid var(--active);
 }
 
 .second-nav-list__item:hover .second-nav__item {
@@ -211,8 +208,6 @@ h2 {
     border-color: var(--active);
 }
 
-
-
 .second-nav__item::after {
     content: '';
     display: inline-block;
@@ -226,12 +221,6 @@ h2 {
     border-top: transparent;
     box-sizing: border-box;
     transform: rotate(45deg) translateY(-50%);
-}
-
-.second-nav__item:focus::after {
-    border: 2px solid var(--active);
-    border-left: transparent;
-    border-top: transparent;
 }
 
 .second-nav__submenu {
@@ -282,6 +271,10 @@ h2 {
 
 .second-nav__submenu li:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.toggle-visibility {
+    display: block;
 }
 
 .second-nav__search {
