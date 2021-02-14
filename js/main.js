@@ -5,6 +5,13 @@ menuItem.forEach(el => {
   });
 });
 
+document.addEventListener('click', (e) =>  {
+  if (!e.target.classList.contains('second-nav__submenu')) {
+    menuItem.classList.remove('toggle-visibility');
+  }
+});
+
+
 var mySwiper = new Swiper('.swiper-container', {
   autoHeight: false,
   slidesPerView: 3,
