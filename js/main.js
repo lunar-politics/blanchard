@@ -1,13 +1,14 @@
 const menuItem = document.querySelectorAll('.second-nav__item');
+const item = document.querySelectorAll('.second-nav__submenu');
 menuItem.forEach(el => {
   el.addEventListener('click', (e) => {
-    e.currentTarget.closest('li').querySelector('.second-nav__submenu').classList.toggle('toggle-visibility');
+    e.currentTarget.closest('li').querySelector('.second-nav__submenu').classList.add('toggle-visibility');
   });
 });
 
 document.addEventListener('click', (e) =>  {
-  if (!e.target.classList.contains('second-nav__submenu')) {
-    menuItem.classList.remove('toggle-visibility');
+  if (!e.target.classList.contains('second-nav-list__item') && !e.target.classList.contains('second-nav__submenu') && !e.target.classList.contains('second-nav__item')) {
+        item.forEach(el => {el.classList.remove('toggle-visibility')});
   }
 });
 
