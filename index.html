@@ -21,7 +21,7 @@
             <nav class="first-nav">
                 <div class="container first-nav__container">
                     <button class="burger"><span></span></button>
-                    <a href="#" class="header-logo"></a>
+                    <a href="#" class="header-logo"><img src="img/header-logo.svg" alt="Логотип"></a>
                     <ul class="first-nav__list">
                         <li><a class="first-nav__item" href="#about">О нас</a></li>
                         <li><a class="first-nav__item" href="#gallery">Галерея</a></li>
@@ -46,7 +46,7 @@
             <nav class="second-nav">
                 <div class="container second-nav__container">
                     <ul class="second-nav__list">
-                        <li class="second-nav-list__item"><a class="second-nav__item" href="#">Реализм</a>
+                        <li class="second-nav-list__item"><button class="second-nav__item" href="#">Реализм</button>
                             <ul class="second-nav__submenu" data-simplebar>
                                 <li><a href="#" class="second-nav__submenu-item">Тинторетто</a></li>
                                 <li><a href="#" class="second-nav__submenu-item">Фридрих</a></li>
@@ -58,7 +58,7 @@
                                 <li><a href="#" class="second-nav__submenu-item">Верроккьо</a></li>
                             </ul>
                         </li>
-                        <li class="second-nav-list__item"><a class="second-nav__item" href="#">Импрессионизм</a>
+                        <li class="second-nav-list__item"><button class="second-nav__item" href="#">Импрессионизм</button>
                             <ul class="second-nav__submenu" data-simplebar>
                                 <li><a href="#" class="second-nav__submenu-item">Тинторетто</a></li>
                                 <li><a href="#" class="second-nav__submenu-item">Фридрих</a></li>
@@ -70,7 +70,7 @@
                                 <li><a href="#" class="second-nav__submenu-item">Верроккьо</a></li>
                             </ul>
                         </li>
-                        <li class="second-nav-list__item"><a class="second-nav__item" href="#">Постимпрессионизм</a>
+                        <li class="second-nav-list__item"><button class="second-nav__item" href="#">Постимпрессионизм</button>
                             <ul class="second-nav__submenu" data-simplebar>
                                 <li><a href="#" class="second-nav__submenu-item">Тинторетто</a></li>
                                 <li><a href="#" class="second-nav__submenu-item">Фридрих</a></li>
@@ -82,7 +82,7 @@
                                 <li><a href="#" class="second-nav__submenu-item">Верроккьо</a></li>
                             </ul>
                         </li>
-                        <li class="second-nav-list__item"><a class="second-nav__item" href="#">Авангард</a>
+                        <li class="second-nav-list__item"><button class="second-nav__item" href="#">Авангард</button>
                             <ul class="second-nav__submenu" data-simplebar>
                                 <li><a href="#" class="second-nav__submenu-item">Тинторетто</a></li>
                                 <li><a href="#" class="second-nav__submenu-item">Фридрих</a></li>
@@ -94,7 +94,7 @@
                                 <li><a href="#" class="second-nav__submenu-item">Верроккьо</a></li>
                             </ul>
                         </li>
-                        <li class="second-nav-list__item"><a class="second-nav__item" href="#">Футуризм</a>
+                        <li class="second-nav-list__item"><button class="second-nav__item" href="#">Футуризм</button>
                             <ul class="second-nav__submenu" data-simplebar>
                                 <li><a href="#" class="second-nav__submenu-item">Тинторетто</a></li>
                                 <li><a href="#" class="second-nav__submenu-item">Фридрих</a></li>
@@ -107,7 +107,12 @@
                             </ul>
                         </li>
                     </ul>
-                    <label for="header-search" class="second-nav__search" tabindex="0"></label>
+                    <button class="header-search__btn">
+                        <svg width="21px" height="22px" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                            </svg>                            
+                    </button>            
                     <input class="header-search" type="search" name="" id="header-search" placeholder="Поиск по сайту">
                 </div>
             </nav>
@@ -127,6 +132,7 @@
     </div>
 
     <section class="about" id="about">
+        <h1 class="visually-hidden">Blanchard</h1>
         <div class="container about__container">
             <h2 class="about__title">О нас</h2>
             <p class="about__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий
