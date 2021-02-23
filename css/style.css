@@ -114,8 +114,7 @@ h2 {
 }
 
 .first-nav__item {
-    padding: 2px 5px;
-    margin-right: 51px;
+    padding: 2px 56px 2px 5px;
     font-weight: 600;
     font-size: 18px;
     color: var(--usu);
@@ -266,7 +265,10 @@ h2 {
 }
 
 .simplebar-scrollbar:before {
+    left: 0;
+    right: 0;
     background: var(--bright);
+    border-radius: 0;
 }
 
 .simplebar-scrollbar.simplebar-visible:before {
@@ -276,7 +278,14 @@ h2 {
 .simplebar-track.simplebar-vertical {
     top: 40px;
     right: 19px;
-    width: 8px;
+    width: 2px;
+    bottom: 40px;
+    background-color: black;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 0px;
+    bottom: 0px;
 }
 
 .second-nav__submenu-item:hover {
@@ -614,6 +623,7 @@ h2 {
     display: inline-block;
     max-width: 65px;
     vertical-align: middle;
+    font-size: 14px;
 }
 
 .swiper-slide {
