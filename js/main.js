@@ -38,3 +38,20 @@ const choices = new Choices(element, {
   itemSelectText: '',
 
 });
+
+document.querySelectorAll('.flag').forEach(function(tabsFlag) {
+  tabsFlag.addEventListener('click', function(event) {
+    const path = event.currentTarget.dataset.path
+    document.querySelectorAll('.catalog-main').forEach(function(tabContent) {
+      tabContent.classList.remove('tab-content-active')
+      console.log(document.querySelectorAll('.catalog-main'))
+    })
+    document.querySelector('[data-target="${path}"]').classList.add('tab-content-active')
+  })
+})
+
+
+$(function () {
+  $("#accordion").accordion();
+});
+
