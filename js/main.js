@@ -46,12 +46,14 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
       tabContent.classList.remove('tab-content-active')
       console.log(document.querySelectorAll('.catalog-main'))
     })
-    document.querySelector('[data-target="${path}"]').classList.add('tab-content-active')
+    document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
   })
 })
 
 
 $(function () {
-  $("#accordion").accordion();
+  $("#accordion").accordion({
+    // collapsible: true
+  });
 });
 

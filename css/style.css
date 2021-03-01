@@ -723,18 +723,21 @@ p {
 }
 
 .flags-list__item {
-    margin-right: 50px;
+    margin-right: 50px;    
+    position: relative;
 }
 
 .flag {
     display: inline-block;
-    position: relative;
+    padding: 0;
     width: 46px;
     height: 46px;
     border-radius: 50%;
     cursor: pointer;
     border: none;
     outline: none;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .flag:hover {
@@ -783,10 +786,6 @@ p {
     background: linear-gradient(to right,#000000 33.3%, #FFD90C 33.3%,#FFD90C 66.6%,#F31830 66.6%);
 }
 
-.tab-content-active {
-    display: block;
-}
-
 .catalog__descr {
     margin-top: 21px;
     margin-bottom: 38px;
@@ -795,8 +794,12 @@ p {
 }
 
 .catalog-main {
-    display: flex;
+    display: none;
     justify-content: space-between;
+}
+
+.tab-content-active {
+    display: flex;
 }
 
 .dont-show {
@@ -890,6 +893,10 @@ p {
     color: var(--active);
 }
 
+.ui-state-active .ui-accordion-header-icon {
+    background-image: url('../img/catalog-down.png');
+}
+
 .ui-accordion .ui-accordion-header:active .ui-accordion-header-icon {
     background-image: url('../img/catalog-up-active.png');
 }
@@ -924,7 +931,6 @@ p {
 
 .catalog-names__item:hover {
     color: var(--bright);
-    font-weight: 600;
     border-bottom: 1px solid var(--bright);
 }
 
