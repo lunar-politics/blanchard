@@ -734,7 +734,7 @@ p {
     height: 46px;
     border-radius: 50%;
     cursor: pointer;
-    border: none;
+    border: 2px solid transparent;
     outline: none;
     background-repeat: no-repeat;
     background-size: cover;
@@ -767,23 +767,23 @@ p {
 }
 
 .flag__fr {
-    background: linear-gradient(to right, #00267F 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%, #F31830 66.6%);
+    background-image: url('../img/flag-fr.png');
 }
 
 .flag__de {
-    background: linear-gradient(to bottom, #000000 33.3%, #DD0000 33.3%, #DD0000 66.6%, #FFCE00 66.6%);
+    background-image: url('../img/flag-de.png');
 }
 
 .flag__it {
-    background: linear-gradient(to right,#009246 33.3%, #FFFFFF 33.3%, #FFFFFF 66.6%,#CE2B37 66.6%); 
+    background-image: url('../img/flag-it.png');
 }
 
 .flag__ru {
-    background: linear-gradient(to bottom, #FFFFFF 33.3%,#0039A6 33.3%, #0039A6 66.6%,#D52B1E 66.6%);
+    background-image: url('../img/flag-ru.png');
 }
 
 .flag__be {
-    background: linear-gradient(to right,#000000 33.3%, #FFD90C 33.3%,#FFD90C 66.6%,#F31830 66.6%);
+    background-image: url('../img/flag-be.png');
 }
 
 .catalog__descr {
@@ -867,6 +867,8 @@ p {
 .ui-accordion .ui-accordion-content {
     padding-left: 0;
     height: auto;
+    border: 2px solid transparent;
+    transition: border-color .3s ease-in-out, color .3s ease-in-out;
 }
 
 .ui-accordion .ui-accordion-header:not(:first-child) {
@@ -923,6 +925,9 @@ p {
 .catalog-names__item {
     padding: 3px;
     border: 2px solid transparent;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
 }
 
 .catalog-names__item:focus {
@@ -939,6 +944,7 @@ p {
 }
 
 .catalog-main__dates {
+    /* margin-top: -2px; */
     font-size: 24px;
     font-weight: 600;
 }
@@ -959,4 +965,8 @@ p {
     color: var(--text-color);
     border-left: none;
     border-right: none;
+}
+
+.catalog-main__accordion .ui-accordion .ui-widget .ui-helper-reset {
+    margin-top: -2px;
 }
