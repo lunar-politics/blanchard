@@ -766,6 +766,7 @@ p {
     opacity: 1;
 }
 
+
 .flag__fr {
     background-image: url('../img/flag-fr.png');
 }
@@ -857,6 +858,7 @@ p {
 }
 
 .ui-accordion .ui-accordion-header {
+    margin-top: -2px;
     padding: 1.5em .5em 1.7em 0;
     margin: 0;
     outline: none;
@@ -934,6 +936,10 @@ p {
     border: 2px solid var(--active) !important;
 }
 
+.catalog-names__item--focused {
+    border: 2px solid var(--active) !important;
+}
+
 .catalog-names__item:hover {
     color: var(--bright);
     border-bottom: 1px solid var(--bright);
@@ -944,7 +950,6 @@ p {
 }
 
 .catalog-main__dates {
-    /* margin-top: -2px; */
     font-size: 24px;
     font-weight: 600;
 }

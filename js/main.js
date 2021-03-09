@@ -12,7 +12,6 @@ document.addEventListener('click', (e) =>  {
   }
 });
 
-
 var mySwiper = new Swiper('.swiper-container', {
   autoHeight: false,
   slidesPerView: 3,
@@ -39,6 +38,7 @@ const choices = new Choices(element, {
 
 });
 
+
 document.querySelectorAll('.flag').forEach(function(tabsFlag) {
   tabsFlag.addEventListener('click', function(event) {
     const path = event.currentTarget.dataset.path
@@ -47,6 +47,12 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
       console.log(document.querySelectorAll('.catalog-main'))
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
+  })
+})
+
+document.querySelectorAll('.catalog-names__item').forEach(function(focusedCatalogNames) {
+  focusedCatalogNames.addEventListener('click', function(event) {
+    document.querySelector('.catalog-names__item--focused').classList.remove('catalog-names__item--focused');
   })
 })
 
