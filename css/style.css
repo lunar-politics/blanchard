@@ -738,6 +738,7 @@ p {
     border:  none;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: box-shadow .3s ease-in-out;
 }
 
 .flag:hover {
@@ -759,6 +760,7 @@ p {
     border-radius: 100%;
     border: 2px solid var(--bright);
     opacity: 0;
+    transition: opacity .3s ease-in-out;
 }
 
 .flag:focus::after {
@@ -872,9 +874,9 @@ p {
 
 .ui-accordion .ui-accordion-content {
     padding-left: 0;
-    height: auto;
-    border: 2px solid transparent;
-    transition: border-color .3s ease-in-out, color .3s ease-in-out;
+    height: auto !important;
+    border: 2px solid transparent;    
+    transition: border .3s ease-in-out, color .3s ease-in-out;
 }
 
 .ui-accordion .ui-accordion-header:not(:first-child) {
@@ -932,8 +934,10 @@ p {
     padding: 3px;
     border: 2px solid transparent;
     background-color: transparent;
-    outline: none;
+    outline: none;    
+    font-family: 'Open Sans', sans-serif !important;
     cursor: pointer;
+    transition: color .3s ease-in-out, border .3s ease-in-out;
 }
 
 .catalog-names__item:focus {
@@ -965,7 +969,7 @@ p {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 11px 0;
-    max-height: 340px;
+    max-height: 309px;
     line-height: 32px;
 }
 

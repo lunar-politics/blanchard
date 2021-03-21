@@ -50,6 +50,12 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
   })
 })
 
+document.querySelectorAll('.flag').forEach(function(focusedFlag) {
+  focusedFlag.addEventListener('click', function(event) {
+    document.querySelector('.flag').style.opacity='1';
+  })
+})
+
 document.querySelectorAll('.catalog-names__item').forEach(function(focusedCatalogNames) {
   focusedCatalogNames.addEventListener('click', function(event) {
     document.querySelector('.catalog-names__item--focused').classList.remove('catalog-names__item--focused');
@@ -58,8 +64,27 @@ document.querySelectorAll('.catalog-names__item').forEach(function(focusedCatalo
 
 
 $(function () {
-  $("#accordion").accordion({
-    // collapsible: true
+  $("#accordion-it").accordion({
+  });
+});
+
+$(function () {
+  $("#accordion-fr").accordion({
+  });
+});
+
+$(function () {
+  $("#accordion-de").accordion({
+  });
+});
+
+$(function () {
+  $("#accordion-ru").accordion({
+  });
+});
+
+$(function () {
+  $("#accordion-be").accordion({
   });
 });
 
