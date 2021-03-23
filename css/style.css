@@ -811,7 +811,12 @@ p {
 }
 
 .catalog-main__descr {
+    display: none;
     margin-right: 50px;
+}
+
+.catalog-main__descr--shown {
+    display: inline-block;
 }
 
 .catalog-descr__img {

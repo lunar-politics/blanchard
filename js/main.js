@@ -44,15 +44,18 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
     const path = event.currentTarget.dataset.path
     document.querySelectorAll('.catalog-main').forEach(function(tabContent) {
       tabContent.classList.remove('tab-content-active')
-      console.log(document.querySelectorAll('.catalog-main'))
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
   })
 })
 
-document.querySelectorAll('.flag').forEach(function(focusedFlag) {
-  focusedFlag.addEventListener('click', function(event) {
-    document.querySelector('.flag').style.opacity='1';
+document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
+  showDescr.addEventListener('click', function(event) {
+    const path = event.currentTarget.dataset.path
+    document.querySelectorAll('.catalog-main__descr').forEach(function(tabContent) {
+      tabContent.classList.remove('catalog-main__descr--shown')
+    })
+    document.querySelector(`[data-target="${path}"]`).classList.add('catalog-main__descr--shown')
   })
 })
 
