@@ -46,6 +46,13 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
       tabContent.classList.remove('tab-content-active')
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
+
+  })
+})
+
+document.querySelectorAll('.flag').forEach(function(focusedFlag) {
+  focusedFlag.addEventListener('click', function(event) {
+    document.querySelector('.flag--focused').classList.remove('flag--focused');
   })
 })
 
