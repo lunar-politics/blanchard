@@ -706,12 +706,12 @@ p {
 
 .country-catalog {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 12px;
+    align-items: center;
+    margin-bottom: 21px;
 }
 
 .catalog__title {    
-    margin-right: 32px;
+    margin-right: 41px;
     margin-bottom: 3px;
     line-height: 1;
     vertical-align: middle;  
@@ -720,44 +720,43 @@ p {
 .flags-list {  
     display: flex;  
     margin: 0;
-    margin-top: -6px;
     padding-left: 0;
 }
 
 .flags-list__item {
-    margin-right: 30px;    
+    margin-right: 50px;    
     position: relative;
 }
 
 .flag {
     display: inline-block;
     padding: 0;
-    width: 66px;
-    height: 66px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     cursor: pointer;
     outline: none;
-    border:  2px solid transparent;
+    border:  none;
     background-repeat: no-repeat;
     background-size: cover;
     transition: box-shadow .3s ease-in-out;
     background-color: transparent;
 }
 
-.flag:hover img{
-    box-shadow: 0px 0px 20px rgba(157, 92, 208, 0.7);
-}
-
 .flag:active {
     border: 2px solid var(--bright);
+}
+
+.flag:hover {    
+    box-shadow: 0px 0px 20px rgba(157, 92, 208, 0.7);
 }
 
 .flag::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: -12px;
+    left: -12px;
     width: 66px;
     height: 66px;
     border-radius: 100%;
@@ -772,13 +771,23 @@ p {
 }
 
 .flag--focused {
-    border: 2px solid var(--bright);
+    box-shadow: 0 0 0 8px #fff, 0 0 0 10px var(--bright);
 }
 
-.flag img {
-    border-radius: 50%;
-    width: 46px;
-    height: 46px;
+.flag__fr {
+    background-image: url('../img/flag-fr.png');
+}
+.flag__de {
+    background-image: url('../img/flag-de.png');
+}
+.flag__it {
+    background-image: url('../img/flag-it.png');
+}
+.flag__ru {
+    background-image: url('../img/flag-ru.png');
+}
+.flag__be {
+    background-image: url('../img/flag-be.png');
 }
 
 .catalog__descr {
