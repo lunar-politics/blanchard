@@ -54,11 +54,6 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
   })
 })
 
-document.querySelectorAll('.flag').forEach(function(focusedFlag) {
-  focusedFlag.addEventListener('click', function(event) {
-    document.querySelector('.flag--focused').classList.remove('flag--focused');
-  })
-})
 
 document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
   showDescr.addEventListener('click', function(event) {
