@@ -101,5 +101,6 @@ document.querySelector('.events__btn').addEventListener('click', function(event)
   document.querySelectorAll('.event-hidden').forEach(function(hideEvent) {
     hideEvent.classList.remove('event-hidden')
   })
+  document.querySelector('.events__btn').style.display = 'none';
 })
 
