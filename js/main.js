@@ -57,20 +57,17 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
 
 document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
   showDescr.addEventListener('click', function(event) {
-    const path = event.currentTarget.dataset.path
+    const path = event.currentTarget.dataset.path;
+    document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
+      showDescr.classList.remove('catalog-names__item--focused')
+    });
+    event.currentTarget.classList.add('catalog-names__item--focused')
     document.querySelectorAll('.catalog-main__descr').forEach(function(tabContent) {
       tabContent.classList.remove('catalog-main__descr--shown')
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('catalog-main__descr--shown')
   })
 })
-
-document.querySelectorAll('.catalog-names__item').forEach(function(focusedCatalogNames) {
-  focusedCatalogNames.addEventListener('click', function(event) {
-    document.querySelector('.catalog-names__item--focused').classList.remove('catalog-names__item--focused');
-  })
-})
-
 
 $(function () {
   $("#accordion-it").accordion({

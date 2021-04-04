@@ -576,15 +576,25 @@
                 </ul>
             </div>
             <div class="catalog-main" data-target="fr">
-                <div class="catalog-main__descr">
-                    <img src="img/catalog-domenico.jpg" alt="" class="catalog-descr__img">
-                    <h3 class="catalog-descr__name">Доменико Гирландайо</h3>
-                    <p class="catalog-descr__date">2 июня 1448 — 11 января 1494.</p>
-                    <p class="catalog-descr__bio">Один из ведущих флорентийских художников Кватроченто, основатель
-                        художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
-                        мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор
-                        фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь
-                        библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
+                <div class="catalog-main__descr" data-target="barthelemi">
+                    <img src="img/catalog-barthelemi.jpg" alt="" class="catalog-descr__img">
+                    <h3 class="catalog-descr__name">Бартелеми д’Эйк</h3>
+                    <p class="catalog-descr__date">ок. 1420 — после 1470г.</p>
+                    <p class="catalog-descr__bio">французский художник нидерландского происхождения, принадлежавший к авиньонской школе живописи.
+                    </p>
+                </div>
+                <div class="catalog-main__descr" data-target="dombet">
+                    <img src="img/catalog-dombet.jpg" alt="" class="catalog-descr__img">
+                    <h3 class="catalog-descr__name">Гийом Домбе</h3>
+                    <p class="catalog-descr__date"> с 1414 по 1461 год</p>
+                    <p class="catalog-descr__bio"> французский художник и витражист. Мастерская Домбе получала самые престижные заказы, она выполняла работы по изготовлению и установке витражей в папском дворце в Авиньоне (1414 год), в Соборе Экса (1415, 1444, 1449 годы), в синагоге Экса (1418 год), в францисканском храме Марселя (1425 год), в храме Св. Марты в Тарасконе (1432 год) и в капелле Св. Петра Люксембургского в Авиньоне (1448 год). Современные исследователи считают, что из пяти созданных Домбе витражей капеллы Св. Митра в соборе Сен Совёр в Экс-ан-Провансе до наших дней дошли лишь изображения Св. Митра, св. Блеза и святого епископа. В них видно влияние как бургундского, так и провансальского и нидерландского искусства.
+                    </p>
+                </div>
+                <div class="catalog-main__descr catalog-main__descr--shown" data-target="duvet">
+                    <img src="img/catalog-duvet.jpg" alt="" class="catalog-descr__img">
+                    <h3 class="catalog-descr__name">Жан Дюве</h3>
+                    <p class="catalog-descr__date"> с 1485 по 1562 год</p>
+                    <p class="catalog-descr__bio"> французский ювелир и первый значительный французский гравёр, декоратор королевских праздников, медальер и эмальер. Отождествляется некоторыми искусствоведами с Жаном Дюве (по прозвищу Дро) из Дижона, который провел шестнадцать лет в Женеве.
                     </p>
                 </div>
                 <ul id="accordion-fr" class="catalog-main__accordion">
@@ -592,30 +602,9 @@
                         <h3 class="catalog-main__dates">C 1400 по 1499 гг.</h3>
                         <div>
                             <ul class="catalog-main__names">
-                                <li><button class="catalog-names__item">Бенедетто ди Биндо</button></li>
-                                <li><button class="catalog-names__item">Бергоньоне, Амброджо</button></li>
-                                <li><button class="catalog-names__item">Биссоло, Франческо</button></li>
-                                <li><button class="catalog-names__item">Больтраффио, Джованни</button></li>
-                                <li><button class="catalog-names__item">Бонсиньори, Франческо</button></li>
-                                <li><button class="catalog-names__item">Боттичини, Рафаэлло</button></li>
-                                <li><button class="catalog-names__item">Брамантино</button></li>
-                                <li><button class="catalog-names__item">Бреа, Людовико</button></li>
-                                <li><button class="catalog-names__item">Бьяджо д’Антонио Туччи</button></li>
-                                <li><button class="catalog-names__item">Веккьетта</button></li>
-                                <li><button class="catalog-names__item">Андреа Верроккьо</button></li>
-                                <li><button class="catalog-names__item">Доменико Гирландайо</button></li>
-                                <li><button class="catalog-names__item">Беноццо Гоццоли</button></li>
-                                <li><button class="catalog-names__item">Граначчи, Франческо</button></li>
-                                <li><button class="catalog-names__item">Грегорио ди Чекко</button></li>
-                                <li><button class="catalog-names__item">Джованни да Удине</button></li>
-                                <li><button class="catalog-names__item">Джованни ди Паоло</button></li>
-                                <li><button class="catalog-names__item">Джорджоне</button></li>
-                                <li><button class="catalog-names__item">Парентино, Бернардо</button></li>
-                                <li><button class="catalog-names__item">Пезеллино</button></li>
-                                <li><button class="catalog-names__item">Пьетро Перуджино</button></li>
-                                <li><button class="catalog-names__item">Перуцци, Бальдассаре</button></li>
-                                <li><button class="catalog-names__item">Пизанелло</button></li>
-                                <li><button class="catalog-names__item">Пинтуриккьо</button></li>
+                                <li><button class="catalog-names__item catalog-names__item--focused" data-path="barthelemi">Бартелеми д’Эйк</button></li>
+                                <li><button class="catalog-names__item" data-path="dombet">Гийом Домбе</button></li>
+                                <li><button class="catalog-names__item" data-path="duvet">Жан Дюве</button></li>        
                             </ul>
                         </div>
                     </li>
