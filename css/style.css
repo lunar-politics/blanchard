@@ -527,8 +527,9 @@ p {
 }
 
 .choices[data-type*=select-one]:after {
-    width: 8px;
-    height: 8px;
+    width: 11px;
+    height: 11px;
+    margin-top: -4.5px;
     border: none;
     background-image: url('../img/gallery-choice-down.svg');
     background-repeat: no-repeat;
@@ -564,6 +565,7 @@ p {
 
 .choices[data-type*=select-one].is-open:after {
     margin-top: -2.5px;
+    transform: rotate(180deg);
 }
 
 .gallery-auth {
@@ -962,7 +964,7 @@ p {
     transition: color .3s ease-in-out, border .3s ease-in-out;
 }
 
-.catalog-names__item:focus {
+.catalog-names__item:active {
     border: 2px solid var(--active) !important;
 }
 
