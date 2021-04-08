@@ -101,3 +101,17 @@ document.querySelector('.events__btn').addEventListener('click', function(event)
   document.querySelector('.events__btn').style.display = 'none';
 })
 
+var mySwiper2 = new Swiper('.swiper-container2', {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
