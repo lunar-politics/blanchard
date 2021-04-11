@@ -1154,6 +1154,8 @@ p {
     margin-bottom: 14px;
     align-items: center;
     user-select: none;
+    cursor: pointer;
+    border: 1px solid transparent;
 }
 
 .publications-cat__item + label::before {
@@ -1178,6 +1180,18 @@ p {
 
 .publications-cat__item:checked + label {
     color: var(--bright);
+}
+
+.publications-cat__item:hover + label {
+    color: var(--hover);
+}
+
+.publications-cat__item:focus + label {
+    border: 1px solid var(--active);
+}
+
+.publications-cat__item:hover + label::before {
+    border: 1px solid var(--hover);
 }
 
 .publications-price {
