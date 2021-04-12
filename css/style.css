@@ -969,7 +969,7 @@ p {
 }
 
 .catalog-names__item--focused {
-    border: 2px solid var(--active) !important;
+    color: var(--active) !important;
 }
 
 .catalog-names__item:hover {
@@ -1087,7 +1087,13 @@ p {
     font-weight: bold;
 }
 
+.event--more:focus {
+    outline: 2px solid var(--active);
+    outline-offset: 3px;
+}
+
 .events__btn {
+    position: relative;
     display: block;
     margin: 0 auto 80px;
     padding: 17px 35px;
@@ -1098,9 +1104,25 @@ p {
     transition: color .3s ease-in-out, background-color .3s ease-in-out
 }
 
+.events__btn::after {
+    content: '';
+    position: absolute;
+    top: -6px; 
+    left: -6px; 
+    bottom: -6px; 
+    right: -6px;
+    border: 2px solid var(--hover);
+    border-radius: 100px;
+    opacity: 0;
+}
+
 .events__btn:hover {
     color: var(--usu);
     background-color: var(--bright);
+}
+
+.events__btn:focus::after {
+    opacity: 1;
 }
 
 .event-hidden {
@@ -1176,6 +1198,7 @@ p {
 .publications-cat__item:checked + label::before {
     border: 1px solid var(--bright);
     background-image: url('../img/public-marker.svg');
+    background-size: 4px 4px;
 }
 
 .publications-cat__item:checked + label {
@@ -1293,7 +1316,10 @@ p {
 }
 
 .public-slider__order {
+    position: relative;
     padding: 10px 21px;
+    margin-bottom: 4px;
+    margin-left: 4px;
     border: 2px solid var(--bright); 
     border-radius: 100px;
     background: transparent;
@@ -1302,6 +1328,22 @@ p {
     cursor: pointer;
     box-sizing:border-box;
     outline: none;
+}
+
+.public-slider__order::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    bottom: -6px;
+    right: -6px;
+    border: 2px solid var(--hover);
+    border-radius: 100px;
+    opacity: 0;
+}
+
+.public-slider__order:focus::after {
+    opacity: 1;
 }
 
 .public-slider__order:hover {
