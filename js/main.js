@@ -76,6 +76,7 @@ $(function () {
 
 $(function () {
   $("#accordion-fr").accordion({
+    active: 1
   });
 });
 
