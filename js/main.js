@@ -50,7 +50,6 @@ document.querySelectorAll('.flag').forEach(function(tabsFlag) {
       tabContent.classList.remove('tab-content-active')
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
-
   })
 })
 
@@ -70,30 +69,15 @@ document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
 })
 
 $(function () {
-  $("#accordion-it").accordion({
+  $(".catalog-main__accordion").accordion({
   });
 });
 
-$(function () {
-  $("#accordion-fr").accordion({
-    active: 1
-  });
-});
-
-$(function () {
-  $("#accordion-de").accordion({
-  });
-});
-
-$(function () {
-  $("#accordion-ru").accordion({
-  });
-});
-
-$(function () {
-  $("#accordion-be").accordion({
-  });
-});
+document.querySelector('.flag__fr').addEventListener('click', function() {
+  document.getElementById('accordion-fr').accordion({
+    active: 1,
+  })
+})
 
 document.querySelector('.events__btn').addEventListener('click', function(event) {
   document.querySelectorAll('.event-hidden').forEach(function(hideEvent) {
