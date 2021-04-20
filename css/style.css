@@ -898,7 +898,7 @@ p {
 
 .ui-accordion .ui-accordion-content {
     padding-left: 0;
-    height: auto !important;
+    overflow-y: hidden;
     border: 2px solid transparent;    
     transition: border .3s ease-in-out, color .3s ease-in-out;
 }

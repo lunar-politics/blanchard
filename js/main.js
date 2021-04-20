@@ -74,9 +74,19 @@ $(function () {
 });
 
 document.querySelector('.flag__fr').addEventListener('click', function() {
-  document.getElementById('accordion-fr').accordion({
-    active: 1,
-  })
+  $('#accordion-fr').accordion('refresh')
+})
+
+document.querySelector('.flag__de').addEventListener('click', function() {
+  $('#accordion-de').accordion('refresh')
+})
+
+document.querySelector('.flag__ru').addEventListener('click', function() {
+  $('#accordion-ru').accordion('refresh')
+})
+
+document.querySelector('.flag__be').addEventListener('click', function() {
+  $('#accordion-be').accordion('refresh')
 })
 
 document.querySelector('.events__btn').addEventListener('click', function(event) {
