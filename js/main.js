@@ -38,18 +38,18 @@ const choices = new Choices(element, {
 
 });
 
-
-document.querySelectorAll('.flag').forEach(function(tabsFlag) {
-  tabsFlag.addEventListener('click', function(event) {
+document.querySelectorAll('.flag').forEach(function (tabsFlag) {
+  tabsFlag.addEventListener('click', function (event) {
     const path = event.currentTarget.dataset.path;
-    document.querySelectorAll('.flag').forEach(function(tabsFlag) {
+    document.querySelectorAll('.flag').forEach(function (tabsFlag) {
       tabsFlag.classList.remove('flag--focused')
     });
     event.currentTarget.classList.add('flag--focused')
-    document.querySelectorAll('.catalog-main').forEach(function(tabContent) {
+    document.querySelectorAll('.catalog-main').forEach(function (tabContent) {
       tabContent.classList.remove('tab-content-active')
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
+    document.querySelector(`[data-target="${path}"]`).firstElementChild.classList.add('catalog-main__descr--shown')
   })
 })
 
