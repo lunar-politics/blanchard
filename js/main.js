@@ -40,6 +40,9 @@ const choices = new Choices(element, {
 
 document.querySelectorAll('.flag').forEach(function (tabsFlag) {
   tabsFlag.addEventListener('click', function (event) {
+    document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
+      showDescr.classList.remove('catalog-names__item--focused')
+    });
     const path = event.currentTarget.dataset.path;
     document.querySelectorAll('.flag').forEach(function (tabsFlag) {
       tabsFlag.classList.remove('flag--focused')
@@ -49,6 +52,9 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
       tabContent.classList.remove('tab-content-active')
     })
     document.querySelector(`[data-target="${path}"]`).classList.add('tab-content-active')
+    document.querySelectorAll('.catalog-main__descr').forEach(function (hideDescr) {
+      hideDescr.classList.remove('catalog-main__descr--shown')
+    })
     document.querySelector(`[data-target="${path}"]`).firstElementChild.classList.add('catalog-main__descr--shown')
   })
 })
