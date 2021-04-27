@@ -926,6 +926,10 @@ p {
     background-image: url('../img/catalog-down-hover.png');
 }
 
+.ui-accordion .ui-accordion-header-active:hover .ui-accordion-header-icon {
+    transform: rotate(180deg);
+}
+
 .ui-accordion .ui-accordion-header:active {
     border-top: 1px solid var(--active);
     border-bottom: 1px solid var(--active);
@@ -1162,7 +1166,8 @@ p {
 .publications__cat {
     font-weight: 700;
     line-height: 32px;
-    margin-bottom: 7px;    
+    margin-bottom: 7px; 
+    margin-top: 0;   
     font-size: 16px;
 }
 
@@ -1180,7 +1185,7 @@ p {
 
 .publications-cat__item + label {
     display: inline-flex;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     align-items: center;
     user-select: none;
     cursor: pointer;
@@ -1191,8 +1196,8 @@ p {
 .publications-cat__item + label::before {
     content: '';
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     flex-shrink: 0;
     flex-grow: 0;
     border: 1px solid var(--usu);
@@ -1227,6 +1232,7 @@ p {
 }
 
 .publications-price {
+    margin-top: 0;
     margin-bottom: 13px;
     font-size: 16px;
 }
