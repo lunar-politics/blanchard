@@ -685,16 +685,18 @@ p {
 
 .swiper-button-prev {
     background-image: url('../img/gallery-arrow-left.png');
+    opacity: 1 !important;
 }
 
 .swiper-button-next {
     background-image: url('../img/gallery-arrow-right.png');
+    opacity: 1 !important;
 }
 
 .swiper-pagination {
     position: static;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 21px;
     width: auto;
     vertical-align: middle;
     font-size: 14px;
@@ -1150,12 +1152,11 @@ p {
 .publications-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 54px;
+    padding-top: 85px;
     padding-bottom: 77px;
 }
 
 .publications-filter {
-    padding-top: 33px;
     margin-right: 109px;
 }
 
@@ -1166,7 +1167,7 @@ p {
 .publications__cat {
     font-weight: 700;
     line-height: 32px;
-    margin-bottom: 7px; 
+    margin-bottom: 2px; 
     margin-top: 0;   
     font-size: 16px;
 }
@@ -1174,7 +1175,12 @@ p {
 .publications-cat__list {
     padding-left: 0;
     margin-top: 0;
-    margin-bottom: 27px;
+    margin-bottom: 36px;
+}
+
+.publications-cat__list li {
+    margin-bottom: 4px;
+    margin-left: -6px;
 }
 
 .publications-cat__item {
@@ -1185,11 +1191,11 @@ p {
 
 .publications-cat__item + label {
     display: inline-flex;
-    margin-bottom: 12px;
+    padding: 3px 5px;
     align-items: center;
     user-select: none;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     transition: color .3s ease-in-out;
 }
 
@@ -1224,7 +1230,7 @@ p {
 }
 
 .publications-cat__item:focus + label {
-    border: 1px solid var(--active);
+    border: 2px solid var(--active);
 }
 
 .publications-cat__item:hover + label::before {
@@ -1276,13 +1282,17 @@ p {
     padding: 0 10px;
 }
 
-.publications-slider {
-    padding-top: 42px;
+.publications-items {
+    padding-top: 28px;
 }
 
 .swiper-container2 {
     width: 1150px;
     overflow-x: hidden;
+}
+
+.swiper-container2 .slider-buttons {
+    margin-top: 0;
 }
 
 .swiper-container2 .swiper-wrapper {
@@ -1292,6 +1302,8 @@ p {
 .swiper-container2 .swiper-slide {
     width: 350px;
     height: auto;
+    padding-bottom: 4px;
+    margin-left: 4px;
 }
 
 .swiper-container2 .swiper-slide img {
@@ -1333,8 +1345,6 @@ p {
 .public-slider__order {
     position: relative;
     padding: 10px 21px;
-    margin-bottom: 4px;
-    margin-left: 4px;
     border: 2px solid var(--bright); 
     border-radius: 100px;
     background: transparent;
