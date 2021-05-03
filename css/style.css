@@ -1172,24 +1172,24 @@ p {
     font-size: 16px;
 }
 
-.publications-cat__list {
+.publications-list {
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 36px;
 }
 
-.publications-cat__list li {
+.publications-list li {
     margin-bottom: 4px;
     margin-left: -6px;
 }
 
-.publications-cat__item {
+.publications-list__item {
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
 
-.publications-cat__item + label {
+.publications-list__item + label {
     display: inline-flex;
     padding: 3px 5px;
     align-items: center;
@@ -1199,7 +1199,7 @@ p {
     transition: color .3s ease-in-out;
 }
 
-.publications-cat__item + label::before {
+.publications-list__item + label::before {
     content: '';
     display: inline-block;
     width: 10px;
@@ -1215,25 +1215,25 @@ p {
 }
 
 
-.publications-cat__item:checked + label::before {
+.publications-list__item:checked + label::before {
     border: 1px solid var(--bright);
     background-image: url('../img/public-marker.svg');
     background-size: 4px 4px;
 }
 
-.publications-cat__item:checked + label {
+.publications-list__item:checked + label {
     color: var(--bright);
 }
 
-.publications-cat__item:hover + label {
+.publications-list__item:hover + label {
     color: var(--hover);
 }
 
-.publications-cat__item:focus + label {
+.publications-list__item:focus + label {
     border: 2px solid var(--active);
 }
 
-.publications-cat__item:hover + label::before {
+.publications-list__item:hover + label::before {
     border: 1px solid var(--hover);
 }
 
@@ -1303,7 +1303,7 @@ p {
     width: 350px;
     height: auto;
     padding-bottom: 4px;
-    margin-left: 4px;
+    padding-left: 4px;
 }
 
 .swiper-container2 .swiper-slide img {
