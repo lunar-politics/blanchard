@@ -116,3 +116,32 @@ var mySwiper2 = new Swiper('.swiper-container2', {
   },
 })
 
+var mySwiper3 = new Swiper('.swiper-container3', {
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
+ymaps.ready(init);
+
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [55.76780602902965,37.624131849997866],
+    zoom: 14
+  });
+  myPlacemark1 = new ymaps.Placemark([55.75846306898368,37.601079499999905], {
+
+    hintContent: '.'
+  }, {
+    iconImageHref: '../img/yandex-mark.png',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-3, -42]
+  });
+  myMap.geoObjects
+    .add(myPlacemark1);
+}
+
