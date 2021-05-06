@@ -135,8 +135,9 @@ function init() {
   });
   myPlacemark1 = new ymaps.Placemark([55.75846306898368,37.601079499999905], {
 
-    hintContent: '.'
+    hintContent: 'Метка'
   }, {
+    iconLayout: 'default#image',
     iconImageHref: '../img/yandex-mark.png',
     iconImageSize: [20, 20],
     iconImageOffset: [-3, -42]
