@@ -1405,9 +1405,20 @@ p {
 .tooltip__marker {
     width: 16px;
     height: 16px;
+    position: relative;
     background-image: url('../img/tooltip.svg');
     background-repeat: no-repeat;
     cursor: pointer;
+}
+
+.tooltip__marker:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 16px;
+    height: 16px;
+    z-index: 10;
 }
 
 .tooltip__popup {
@@ -1440,6 +1451,7 @@ p {
     border-color: #cacaca transparent transparent transparent;
     opacity: 0;
     transition: opacity .3s ease-in-out;
+    z-index: 1;
 }
 
 .tooltip__marker:hover+.tooltip__popup, .tooltip__marker:hover+.tooltip__popup::after {
@@ -1545,7 +1557,7 @@ p {
 
 .contacts-info {
     width: 35.5%;
-    padding-left: calc((100vw - var(--container-width))/2);
+    padding-left: calc((100% - var(--container-width))/2);
     padding-top: 124px;
     padding-right: 122px;
     border-top: 1px solid #cacaca;
@@ -1573,6 +1585,7 @@ p {
 .contacts-form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 41px;
 }
 
 .contacts-form input {
@@ -1584,7 +1597,6 @@ p {
 
 .contacts-form__btn {
     padding: 17px 35px;
-    margin-bottom: 41px;
     align-self: flex-start;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -1614,7 +1626,7 @@ p {
     padding-left: 0;
 }
 
-.contacts-mess__list li:not(:last-child) {
+.contacts-mess__items:not(:last-child) {
     margin-right: 20px;
 }
 
@@ -1624,6 +1636,11 @@ p {
     height: 40px;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform .3s ease-in-out;
+}
+
+.contacts-mess__item:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .contacts-mess__item--wa {
