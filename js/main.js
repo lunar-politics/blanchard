@@ -13,11 +13,27 @@ document.addEventListener('click', (e) =>  {
 });
 
 var mySwiper = new Swiper('.swiper-container', {
+  
   autoHeight: false,
-  slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup: 1,
-  slidesPerColumn: 2,
+  breakpoints: {
+    1630: {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      slidesPerGroup: 1,
+    },
+    1200: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 1,
+    },
+    1024: {
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 1,
+    },
+  },
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -103,9 +119,17 @@ document.querySelector('.events__btn').addEventListener('click', function(event)
 })
 
 var mySwiper2 = new Swiper('.swiper-container2', {
-  slidesPerView: 3,
+  
   spaceBetween: 50,
   slidesPerGroup: 3,
+  breakpoints: {
+    1630: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+  },
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -117,9 +141,16 @@ var mySwiper2 = new Swiper('.swiper-container2', {
 })
 
 var mySwiper3 = new Swiper('.swiper-container3', {
-  slidesPerView: 3,
   spaceBetween: 50,
   slidesPerGroup: 3,
+  breakpoints: {
+    1630: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

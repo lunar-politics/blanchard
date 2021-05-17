@@ -20,7 +20,7 @@
         <header class="header">
             <nav class="first-nav">
                 <div class="container first-nav__container">
-                    <button class="burger"><span></span></button>
+                    <button class="burger"><span class="burger-line"></span></button>
                     <a href="#" class="header-logo"><img src="img/header-logo.svg" alt="Логотип"></a>
                     <ul class="first-nav__list">
                         <li class="first-nav__item"><a class="first-nav__link" href="#about">О нас</a></li>
@@ -126,10 +126,8 @@
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-text">
-                    <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
-                    <p class="hero__descr">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
-                        заданий
-                        создаёт предпосылки для новых предложений.</p>
+                    <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
+                    <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
                     <button class="btn hero__btn">Подписаться на рассылку</button>
                 </div>
             </div>
@@ -1617,9 +1615,7 @@
                         </div>
                         <h3 class="event__title">Выставка «Формация 2020»</h3>
                         <p class="event__descr">Идейные соображения высшего порядка, а также современная методология
-                            разработки играет важную роль в формировании глубокомысленных рассуждений. Также как
-                            перспективное планирование играет определяющее значение для новых принципов формирования
-                            материально-технической и кадровой базы.</p>
+                            разработки играет важную роль в формировании глубокомысленных рассуждений. .</p>
 
 
                         <a href="#" class="event__more">Подробнее</a>
@@ -1851,40 +1847,40 @@
             <h3 class="projects-partner__title">Партнёры проектов:</h3>
             <div class="partners-list">
                 <div class="swiper-container3">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-1.jpg" alt="">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-2.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-3.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-4.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-5.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-6.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-7.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-8.png" alt="">
+                        </div>
+                        <div class="swiper-slide projects-partner__item">
+                            <img src="img/partner-9.png" alt="">
+                        </div>
                     </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-2.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-3.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-4.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-5.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-6.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-7.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-8.png" alt="">
-                    </div>
-                    <div class="swiper-slide projects-partner__item">
-                        <img src="img/partner-9.png" alt="">
-                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
-            </div>
-            
+
         </div>
     </section>
     <section class="contacts" id="contacts">
@@ -1900,16 +1896,18 @@
                 <div class="contacts__form">
                     <h3 class="contacts-form__title">Заказать обратный звонок</h3>
                     <form action="" class="contacts-form">
-                        <input type="text" name="" id="" placeholder="Имя*">
-                        <input type="tel" name="" id="" placeholder="Телефон*">
+                        <input class="contacts-form__name" type="text" name="" id="" placeholder="Имя*">
+                        <input class="contacts-form__tel" type="tel" name="" id="" placeholder="Телефон*">
                         <button class="contacts-form__btn">Заказать</button>
                     </form>
                 </div>
                 <div class="contacts__mess">
                     <h3 class="contacts-mess__title">Связаться в один клик</h3>
                     <ul class="contacts-mess__list">
-                        <li class="contacts-mess__items"><a href="https://wa.me/79186426272?text=Курсовая%20работа." class="contacts-mess__item contacts-mess__item--wa"></a></li>
-                        <li class="contacts-mess__items"><a href="tg://resolve?domain=@lunar_politics" class="contacts-mess__item contacts-mess__item--tg"></a></li>
+                        <li class="contacts-mess__items"><a href="https://wa.me/79186426272?text=Курсовая%20работа."
+                                class="contacts-mess__item contacts-mess__item--wa"></a></li>
+                        <li class="contacts-mess__items"><a href="tg://resolve?domain=@lunar_politics"
+                                class="contacts-mess__item contacts-mess__item--tg"></a></li>
                     </ul>
                 </div>
 
