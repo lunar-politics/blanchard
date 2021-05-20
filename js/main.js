@@ -12,14 +12,13 @@ document.addEventListener('click', (e) =>  {
   }
 });
 
-var mySwiper = new Swiper('.swiper-container', {
-  
+var mySwiper = new Swiper('.swiper-container1', {  
   autoHeight: false,
   spaceBetween: 50,
   slidesPerGroup: 1,
-  breakpoints: {
-    1630: {
-      slidesPerView: 3,
+  breakpoints: {    
+    1024: {
+      slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },
@@ -28,8 +27,9 @@ var mySwiper = new Swiper('.swiper-container', {
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },
-    1024: {
-      slidesPerView: 2,
+    1630: {
+      autoHeight: false,
+      slidesPerView: 3,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },
@@ -123,12 +123,12 @@ var mySwiper2 = new Swiper('.swiper-container2', {
   spaceBetween: 50,
   slidesPerGroup: 3,
   breakpoints: {
-    1630: {
-      slidesPerView: 3,
-    },
     1200: {
       slidesPerView: 2,
     },
+    1630: {
+      slidesPerView: 3,
+    },    
   },
   pagination: {
     el: '.swiper-pagination',
@@ -144,12 +144,12 @@ var mySwiper3 = new Swiper('.swiper-container3', {
   spaceBetween: 50,
   slidesPerGroup: 3,
   breakpoints: {
-    1630: {
-      slidesPerView: 3,
-    },
     1200: {
       slidesPerView: 2,
     },
+    1630: {
+      slidesPerView: 3,
+    },    
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -175,5 +175,9 @@ function init() {
   });
   myMap.geoObjects
     .add(myPlacemark1);
+}
+
+if (screen.width < 1024) {
+  document.querySelector('.event:nth-child(3)').classList.add('event-hidden');
 }
 
