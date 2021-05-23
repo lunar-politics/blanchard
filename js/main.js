@@ -12,23 +12,33 @@ document.addEventListener('click', (e) =>  {
   }
 });
 
-var mySwiper = new Swiper('.swiper-container1', {  
-  autoHeight: false,
-  spaceBetween: 50,
-  slidesPerGroup: 1,
-  breakpoints: {    
+var mySwiper1 = new Swiper('.swiper-container1', {  
+  breakpoints: {  
+    577: {
+      slidesPerView: 1,
+      slidesPerColumn: 1,
+      slidesPerGroup: 1,
+    },  
+    768: {
+      spaceBetween: 35,
+      slidesPerView: 2,
+      slidesPerColumn: 2,
+      slidesPerGroup: 1,
+    },  
     1024: {
+      spaceBetween: 35,
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },
     1200: {
+      spaceBetween: 35,
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },
-    1630: {
-      autoHeight: false,
+    1631: {
+      spaceBetween: 50,
       slidesPerView: 3,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
@@ -120,14 +130,27 @@ document.querySelector('.events__btn').addEventListener('click', function(event)
 
 var mySwiper2 = new Swiper('.swiper-container2', {
   
-  spaceBetween: 50,
-  slidesPerGroup: 3,
   breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 29,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 29,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
     1200: {
       slidesPerView: 2,
+      spaceBetween: 35,
     },
     1630: {
       slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
     },    
   },
   pagination: {
@@ -141,14 +164,23 @@ var mySwiper2 = new Swiper('.swiper-container2', {
 })
 
 var mySwiper3 = new Swiper('.swiper-container3', {
-  spaceBetween: 50,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
   breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 35,
+    },
     1200: {
       slidesPerView: 2,
+      spaceBetween: 35,
     },
     1630: {
       slidesPerView: 3,
+      spaceBetween: 50,
     },    
   },
   navigation: {
@@ -181,3 +213,22 @@ if (screen.width < 1024) {
   document.querySelector('.event:nth-child(3)').classList.add('event-hidden');
 }
 
+// const slider = document.querySelector('.slider-container');
+
+// let eventSlider;
+
+// function mobileSlider() {
+//   if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+//     eventSlider = new Swiper(slider, {
+//       slidesPerView: 1,
+//       slideClass: 'event',
+//     });
+//     slider.dataset.mobile = 'true';
+//   }
+//   if (window.innerWidth > 768) {
+//     slider.dataset.mobile = 'false';
+//     if (eventsSlider.classList.contains('swiper-container-initialized')) {
+//       slider.destroy();
+//     }
+//   }
+// }
