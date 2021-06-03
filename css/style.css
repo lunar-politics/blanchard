@@ -638,7 +638,8 @@ p {
 }
 
 .swiper-container1 {
-    overflow-x: hidden;
+    height: 810px;
+    overflow: hidden;
 }
 
 .swiper-slide:active .gallery-slide__img {
@@ -749,11 +750,6 @@ p {
     height: calc((100% - 50px) / 2);
     overflow: hidden;
 }
-
-.swiper-wrapper {
-    height: 750px;
-}
-
 
 .catalog {
     padding-top: 88px;
@@ -1338,10 +1334,6 @@ p {
     margin-top: 0;
 }
 
-.swiper-container2 .swiper-wrapper {
-    height: auto;
-}
-
 .swiper-container2 .swiper-slide {
     width: 350px;
     padding-bottom: 4px;
@@ -1536,10 +1528,6 @@ p {
     height: 100%;
     margin: 0 75px 88px;
     overflow-x: hidden;
-}
-
-.swiper-container3 .swiper-wrapper {
-    height: 100%;
 }
 
 .projects-partner__item {
@@ -2108,10 +2096,6 @@ p {
        height: 500px;
     }
 
-    .swiper-wrapper {
-        height: auto;
-    }
-
     .country-catalog {
         flex-direction: column;
         align-items:flex-start;
@@ -2259,6 +2243,7 @@ p {
 
     .gallery-slider {
         position: relative;
+        height: 365px;
     }
 
     .swiper-container1 .slider-buttons {
@@ -2433,6 +2418,10 @@ p {
         width: 96px;
         height: 21px;
     }
+}
+
+@media (max-width: 320px) {
+
 }
 
 
