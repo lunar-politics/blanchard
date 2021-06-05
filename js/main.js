@@ -222,9 +222,11 @@ const slider = document.querySelector('.slider-container');
 
 let eventSlider;
 
+let mobSlider = document.querySelector('.slider-container');
+
 function mobileSlider() {
   if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
-    eventSlider = new Swiper(slider, {
+    mobSlider = new Swiper(slider, {
       slidesPerView: 1,
       slideClass: 'event',
     });
@@ -232,7 +234,7 @@ function mobileSlider() {
   }
   if (window.innerWidth > 768) {
     slider.dataset.mobile = 'false';
-    if (eventSlider.classList.contains('swiper-container-initialized')) {
+    if (mobSlider.classList.contains('swiper-container-initialized')) {
       slider.destroy();
     }
   }

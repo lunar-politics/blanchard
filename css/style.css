@@ -634,12 +634,17 @@ p {
 }
 
 .gallery-slider {
-    width: 1150px;
+    width: 72%;
 }
 
 .swiper-container1 {
+    width: 100%;
     height: 810px;
     overflow: hidden;
+}
+
+.gallery-img {
+    background-size: cover;
 }
 
 .swiper-slide:active .gallery-slide__img {
@@ -2116,6 +2121,10 @@ p {
 
     .publications__img {
         height: 50%;
+    }
+
+    .projects {
+        width: 100%;
     }
 
     .contacts {
