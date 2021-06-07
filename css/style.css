@@ -644,7 +644,9 @@ p {
 }
 
 .gallery-img {
-    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .swiper-slide:active .gallery-slide__img {

@@ -220,8 +220,6 @@ if (screen.width < 1024) {
 
 const slider = document.querySelector('.slider-container');
 
-let eventSlider;
-
 let mobSlider = document.querySelector('.slider-container');
 
 function mobileSlider() {
