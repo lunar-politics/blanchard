@@ -220,7 +220,7 @@ if (screen.width < 1024) {
 
 const slider = document.querySelector('.slider-container');
 
-let mobSlider = document.querySelector('.slider-container');
+let mobSlider;
 
 function mobileSlider() {
   if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
@@ -233,9 +233,13 @@ function mobileSlider() {
   if (window.innerWidth > 768) {
     slider.dataset.mobile = 'false';
     if (mobSlider.classList.contains('swiper-container-initialized')) {
-      slider.destroy();
+      mobSlider.destroy();
     }
   }
 }
 
-mobileSlider();
+window.addEventListener('resize', ()=> {
+  mobileSlider();
+})
+
+

@@ -2313,6 +2313,10 @@ p {
         line-height: 38px;
     }
 
+    .events__list {
+        flex-wrap: nowrap;
+    }
+
     .publications-filter__title {
         font-size: 28px;
         line-height: 38px;
