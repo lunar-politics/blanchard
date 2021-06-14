@@ -207,51 +207,32 @@ function init() {
   });
   myMap.geoObjects
     .add(myPlacemark1);
+  myMap.behaviors.disable('scrollZoom');
 }
 
 if (screen.width < 1024) {
   document.querySelector('.event:nth-child(3)').classList.add('event-hidden');
 }
 
-// if (screen.width < 768) {
-//   document.querySelector('.event').classList.add('swiper-slide');
-//   document.querySelector('.swiper-container2').destroy();
-// }
+if (screen.width < 576) {
+  document.querySelectorAll('.event').forEach(el => {el.classList.remove('event-hidden')});
+}
 
-// const slider = document.querySelector('.slider-container');
-
-// let mobSlider;
-
-// function mobileSlider() {
-//   if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
-//     mobSlider = new Swiper(slider, {
-//       slidesPerView: 1,
-//       slideClass: 'event',
-//     });
-//     slider.dataset.mobile = 'true';
-//   }
-//   if (window.innerWidth > 768) {
-//     slider.dataset.mobile = 'false';
-//     if (slider.classList.contains('swiper-container-initialized')) {
-//       mobSlider.destroy();
-//     }
-//   }
-// }
-
-// window.addEventListener('resize', () => {
-//   mobileSlider();
-// });
 const slider = document.querySelector('.slider-container');
 let mobSlider;
 function mobileSlider() {
-  if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+  if (window.innerWidth <= 576 && slider.dataset.mobile == 'false') {
     mobSlider = new Swiper(slider, {
       slidesPerView: 1,
       slideClass: 'event',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
     });
     slider.dataset.mobile = 'true';
   }
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 576) {
     slider.dataset.mobile = 'false';
     if (slider.classList.contains('swiper-container-initialized')) {
       mobSlider.destroy();
@@ -259,9 +240,15 @@ function mobileSlider() {
   }
 }
 
+function pubSliderDestroy() {
+  if (window.innerWidth < 576) {
+    mySwiper2.destroy();
+  }
+}
 
 window.addEventListener('resize', () => {
   mobileSlider();
+  pubSliderDestroy();
 });
 
 
