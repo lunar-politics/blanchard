@@ -242,7 +242,12 @@ function mobileSlider() {
 
 function pubSliderDestroy() {
   if (window.innerWidth < 576) {
-    mySwiper2.destroy();
+    if (slider.classList.contains('swiper-container-initialized')) {
+      mySwiper2.destroy();
+    }
+  }
+  if (window.innerWidth >= 576) {
+    mySwiper2.update();
   }
 }
 
@@ -251,4 +256,5 @@ window.addEventListener('resize', () => {
   pubSliderDestroy();
 });
 
-
+mobileSlider();
+pubSliderDestroy();

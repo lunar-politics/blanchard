@@ -2117,8 +2117,33 @@ p {
         flex-wrap: nowrap;
     }
 
+    .publications__cat {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-top: 1px solid  rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+
+    .publications__cat::after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        right: 5px;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 7px;
+        height: 7px;
+        border: 1px solid #ffffff;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+        transform: rotate(45deg);
+    }
+
     .publications-list {
-        min-width: 100%;
+        display: none;
     }
 
     .publications__img {
@@ -2365,35 +2390,6 @@ p {
     .publications-filter__title {
         font-size: 28px;
         line-height: 38px;
-    }
-
-    .publications__cat {
-        position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        border-top: 1px solid  rgba(255, 255, 255, 0.5);
-        border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
-        cursor: pointer;
-    }
-
-    .publications__cat::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        right: 5px;
-        top: 45%;
-        transform: translateY(-50%);
-        width: 7px;
-        height: 7px;
-        border: 1px solid #ffffff;
-        border-top: 1px solid transparent;
-        border-left: 1px solid transparent;
-        transform: rotate(45deg);
-    }
-
-    .publications-list, {
-        display: none;
     }
 
     .publications-range {
