@@ -258,3 +258,18 @@ window.addEventListener('resize', () => {
 
 mobileSlider();
 pubSliderDestroy();
+
+tippy('#projects__tooltop1', {
+  content: 'Пример современных тенденций - современная методология разработки',
+  theme: 'project',
+});
+
+tippy('#projects__tooltop2', {
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  theme: 'project',
+});
+
+tippy('#projects__tooltop3', {
+  content: 'В стремлении повысить качество',
+  theme: 'project',
+});

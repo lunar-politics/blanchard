@@ -1452,7 +1452,29 @@ p {
     cursor: pointer;
 }
 
-.tooltip__marker:after {
+.tippy-box[data-theme~='project'] {
+    background-color: #cacaca;
+    color: var(--usu);
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: initial;
+  }
+
+  .tippy-box[data-theme~='project'][data-placement^='top'] > .tippy-arrow::before {
+    border-top-color: #cacaca;
+  }
+  .tippy-box[data-theme~='project'][data-placement^='bottom'] > .tippy-arrow::before {
+    border-bottom-color: #cacaca;
+  }
+  .tippy-box[data-theme~='project'][data-placement^='left'] > .tippy-arrow::before {
+    border-left-color: #cacaca;
+  }
+  .tippy-box[data-theme~='project'][data-placement^='right'] > .tippy-arrow::before {
+    border-right-color: #cacaca;
+  }
+
+/* .tooltip__marker:after {
     position: absolute;
     top: 0;
     left: 0;
@@ -1460,9 +1482,9 @@ p {
     width: 16px;
     height: 16px;
     z-index: 10;
-}
+} */
 
-.tooltip__popup {
+/* .tooltip__popup {
     position: absolute;
     bottom: 25px;
     left:50%;
@@ -1493,7 +1515,7 @@ p {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     z-index: 1;
-}
+} */
 
 .tooltip__marker:hover+.tooltip__popup, .tooltip__marker:hover+.tooltip__popup::after {
     opacity: 1;
