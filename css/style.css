@@ -1474,49 +1474,6 @@ p {
     border-right-color: #cacaca;
   }
 
-/* .tooltip__marker:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    width: 16px;
-    height: 16px;
-    z-index: 10;
-} */
-
-/* .tooltip__popup {
-    position: absolute;
-    bottom: 25px;
-    left:50%;
-    transform:translateX(-50%);
-    padding: 10px 13px;
-    max-width: 264px;
-    min-width: 242px;
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--usu);
-    text-align: center;
-    background-color: #cacaca;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-}
-
-.tooltip__popup::after {
-    position: absolute;
-    top: 100%;
-    left:50%;
-    transform:translateX(-50%);
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px;
-    border-color: #cacaca transparent transparent transparent;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    z-index: 1;
-} */
-
 .tooltip__marker:hover+.tooltip__popup, .tooltip__marker:hover+.tooltip__popup::after {
     opacity: 1;
 }
@@ -1712,7 +1669,7 @@ p {
 }
 
 .contacts-map {
-    width: 64.5%;
+    width: 63.5%;
     height: 700px;
 }
 [class*="ymaps-2"][class*="-ground-pane"] {
@@ -2132,6 +2089,8 @@ p {
 
     .event {
         width: 100%;
+        max-width: none;
+        margin-right: 0;
     }
 
     .events__slider-container .swiper-wrapper {
