@@ -244,6 +244,9 @@ function pubSliderDestroy() {
   if (window.innerWidth >= 576 && pubSlider.dataset.mobile == 'false') {
     publicSlider = new Swiper('.swiper-container2', {
       breakpoints: {
+				576: {
+          width: null,
+        },
         768: {
           slidesPerView: 2,
           spaceBetween: 29,
@@ -278,6 +281,8 @@ function pubSliderDestroy() {
     if (pubSlider.classList.contains('swiper-container-initialized')) {
       publicSlider.destroy();
     }
+		document.querySelector('.swiper-container2').classList.add('swiper-no-swiping');
+		document.querySelectorAll('.public-slide').forEach(el => {el.style.width = "48%"});
   }
 }
 
