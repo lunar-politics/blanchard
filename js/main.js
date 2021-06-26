@@ -26,7 +26,8 @@ document.querySelector('.burger').addEventListener('click', function() {
 var mySwiper1 = new Swiper('.swiper-container1', {  
   breakpoints: {  
     577: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      spaceBetween: 10,
       slidesPerColumn: 1,
       slidesPerGroup: 1,
     },  

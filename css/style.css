@@ -2136,13 +2136,13 @@ html .ui-button.ui-state-disabled:active {
     .hero__title {
         font-size: 64px;
     }
+    
+    .gallery-sort {
+        margin-bottom: 80px;
+    }
 
     .hero__descr {
         margin-bottom: 50px;
-    }
-
-    .gallery-container {
-        padding-bottom: 210px;
     }
 
     .gallery-filter {
@@ -2358,10 +2358,6 @@ html .ui-button.ui-state-disabled:active {
     .gallery__title {
         font-size: 28px;
         line-height: 38px;
-    }
-
-    .gallery-sort {
-        margin-bottom: 80px;
     }
 
     .gallery-slider {
