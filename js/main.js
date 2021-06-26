@@ -12,6 +12,17 @@ document.addEventListener('click', (e) =>  {
   }
 });
 
+const burgerMenu = document.querySelector('.first-nav__list');
+const burgerItem = document.querySelectorAll('.first-nav__item');
+const burgerLogim = document.querySelector('.login');
+const burgerSign = document.querySelector('.burger-line')
+document.querySelector('.burger').addEventListener('click', function() {
+  burgerMenu.classList.toggle('burger-menu');
+  burgerItem.forEach(el => {el.classList.toggle('burger-item')});
+  burgerLogim.classList.toggle('burger-login');
+  burgerSign.classList.toggle('burger-close');
+});
+
 var mySwiper1 = new Swiper('.swiper-container1', {  
   breakpoints: {  
     577: {
@@ -128,40 +139,6 @@ document.querySelector('.events__btn').addEventListener('click', function(event)
   document.querySelector('.events__btn').style.display = 'none';
 })
 
-// var mySwiper2 = new Swiper('.swiper-container2', {
-  
-//   breakpoints: {
-//     576: {
-//       slidesPerView: 2,
-//       spaceBetween: 29,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 29,
-//     },
-//     1024: {
-//       slidesPerView: 2,
-//       spaceBetween: 40,
-//     },
-//     1200: {
-//       slidesPerView: 2,
-//       spaceBetween: 35,
-//     },
-//     1630: {
-//       slidesPerView: 3,
-//       spaceBetween: 50,
-//       slidesPerGroup: 3,
-//     },    
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'fraction',
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// })
 
 var mySwiper3 = new Swiper('.swiper-container3', {
   slidesPerGroup: 1,
@@ -245,7 +222,8 @@ function pubSliderDestroy() {
     publicSlider = new Swiper('.swiper-container2', {
       breakpoints: {
 				576: {
-          width: null,
+          slidesPerView: 2,
+          spaceBetween: 10,
         },
         768: {
           slidesPerView: 2,
@@ -274,6 +252,7 @@ function pubSliderDestroy() {
         prevEl: '.swiper-button-prev',
       },
     });
+    document.querySelector('.swiper-container2').classList.remove('swiper-no-swiping');
   }
   pubSlider.dataset.mobile = 'false';
   if (window.innerWidth < 576) {
@@ -282,7 +261,7 @@ function pubSliderDestroy() {
       publicSlider.destroy();
     }
 		document.querySelector('.swiper-container2').classList.add('swiper-no-swiping');
-		document.querySelectorAll('.public-slide').forEach(el => {el.style.width = "48%"});
+		document.querySelectorAll('.public-slide').forEach(el => {el.classList.add('public-slide')});
   }
 }
 
