@@ -3,12 +3,14 @@ const item = document.querySelectorAll('.second-nav__submenu');
 menuItem.forEach(el => {
   el.addEventListener('click', (e) => {
     e.currentTarget.closest('li').querySelector('.second-nav__submenu').classList.add('toggle-visibility');
+    e.currentTarget.closest('li').querySelector('.second-nav__item').classList.add('second-nav__open');
   });
 });
 
 document.addEventListener('click', (e) =>  {
   if (!e.target.classList.contains('second-nav-list__item') && !e.target.classList.contains('second-nav__submenu') && !e.target.classList.contains('second-nav__item')) {
         item.forEach(el => {el.classList.remove('toggle-visibility')});
+        menuItem.forEach(el => {el.classList.remove('second-nav__open')});
   }
 });
 
@@ -28,17 +30,17 @@ var mySwiper1 = new Swiper('.swiper-container1', {
     577: {
       slidesPerView: 2,
       spaceBetween: 10,
-      slidesPerColumn: 1,
+      slidesPerColumn: 2,
       slidesPerGroup: 1,
     },  
     768: {
-      spaceBetween: 35,
+      spaceBetween: 34,
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 1,
     },  
     1024: {
-      spaceBetween: 35,
+      spaceBetween: 34,
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 1,

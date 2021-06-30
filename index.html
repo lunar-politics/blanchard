@@ -28,7 +28,7 @@
                         <li class="first-nav__item"><a class="first-nav__link" href="#about">О нас</a></li>
                         <li class="first-nav__item"><a class="first-nav__link" href="#gallery">Галерея</a></li>
                         <li class="first-nav__item"><a class="first-nav__link" href="#catalog">Каталог</a></li>
-                        <li class="first-nav__item"><a class="first-nav__link" href="#events">События</a></li>
+                        <li class="first-nav__item"><a class="first-nav__link" href="#nnts">События</a></li>
                         <li class="first-nav__item"><a class="first-nav__link" href="#publications">Издания</a></li>
                         <li class="first-nav__item"><a class="first-nav__link" href="#projects">Проекты</a></li>
                         <li class="first-nav__item"><a class="first-nav__link" href="#contacts">Контакты</a></li>
@@ -110,17 +110,19 @@
                             </ul>
                         </li>
                     </ul>
-                    <button class="header-search__btn">
-                        <svg width="21px" height="22px" viewBox="0 0 23 22" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <rect width="6.8678" height="1.71695"
-                                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                    <input class="header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по сайту">
+                    <form class="search-form" action="">
+                        <button class="header-search__btn">
+                            <svg width="21px" height="22px" viewBox="0 0 23 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6.8678" height="1.71695"
+                                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                        <input class="header-search" type="search" name="header-search" id="header-search" placeholder="Поиск по сайту">
+                    </form>                    
                 </div>
             </nav>
 
@@ -157,7 +159,7 @@
                     <h2 class="gallery__title">
                         Галерея
                     </h2>
-                    <p class="gallery-filter__title">Фильтровать по:</p>
+                    <p class="gallery-filter__title">Фильтр:</p>
                     <select class="gallery-filter__list" name="gallery-filter" id="gallery-filter">
                         <option class="gallery-filter__item" value="">Автор</option>
                         <option class="gallery-filter__item" value="">Направление</option>
@@ -173,99 +175,107 @@
 
                 <div class="swiper-container1">
                     <div class="slider-buttons">
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-prev">
+                            <svg class="gallery-prev" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+                            </svg>
+                        </div>
                         <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-next">
+                            <svg class="gallery-next" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+                            </svg>
+                        </div>
                     </div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-1.jpg" alt="">                    
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-2.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-3.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-4.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-5.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-6.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-7.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-8.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-9.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-10.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-11.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-12.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-13.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-14.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-15.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-16.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-17.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-18.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-19.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-20.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-21.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-22.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-23.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-24.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-25.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-26.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-27.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-28.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-29.png" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide gallery-slide">
                             <img class="gallery-img" src="img/gallery-30.png" alt="">
                         </div>
 
@@ -1652,7 +1662,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination events-pagination"></div>
             </div>
             
             <button class="btn events__btn" id="eventsBtn">Все события</button>
@@ -1728,12 +1738,20 @@
 
                     <div class="swiper-container2" data-mobile="false">
                         <div class="slider-buttons">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev">
+                                <svg class="gallery-prev" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 11L0.999995 6L6 0.999998" stroke="white"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-pagination public-pagination"></div>
+                            <div class="swiper-button-next">
+                                <svg class="gallery-next" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
+                                </svg>
+                            </div>
                         </div>
 
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper public-slider__wrapper">
                             <div class="swiper-slide public-slide">
                                 <img class="publications__img" src="img/public-1.jpg" alt="">
                                 <div class="public-slider__descr">
@@ -1826,14 +1844,14 @@
                 смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус
                 бесполезности. Прежде всего, постоянное информационно-пропагандистское
                 <div class="tooltip">
-                    <div class="tooltip__marker" id="projects__tooltop1"></div>        
+                    <div class="tooltip__marker" id="projects__tooltop1" tabindex="0"></div>        
                 </div> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности
                 принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены
                 <div class="tooltip">
-                    <div class="tooltip__marker" id="projects__tooltop2"></div>
+                    <div class="tooltip__marker" id="projects__tooltop2" tabindex="0"></div>
                 </div> исключительно в разрезе маркетинговых и финансовых
                 <div class="tooltip">
-                    <div class="tooltip__marker" id="projects__tooltop3"></div>
+                    <div class="tooltip__marker" id="projects__tooltop3" tabindex="0"></div>
                 </div> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
                 резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными
                 данными до степени совершенной неузнаваемости. Подробнее: <a href="#"
@@ -1871,8 +1889,16 @@
                             <img class="projects__img" src="img/partner-9.png" alt="">
                         </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev projects-prev">
+                        <svg class="gallery-prev" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 11L0.999995 6L6 0.999998" stroke="black"/>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next projects-next">
+                        <svg class="gallery-next" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L6.00001 6L1 0.999997" stroke="black"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -1885,8 +1911,8 @@
         <div class="contacts-wrap">
             <div class="contacts-info">
                 <div class="contacts__address">
-                    <span>Шоурум №4</span>
-                    Леонтьевский переулок, дом 5, строение 1
+                    <span class="address-name">Шоурум №4</span>
+                    Леонтьевский переулок, дом 5/1
                 </div>
                 <div class="contacts__form">
                     <h3 class="contacts-form__title">Заказать обратный звонок</h3>
@@ -1928,6 +1954,7 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="js/main.js"></script>
+    <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
 </body>
 
 </html>
