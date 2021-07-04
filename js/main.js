@@ -85,9 +85,9 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     });
     const path = event.currentTarget.dataset.path;
     document.querySelectorAll('.flag').forEach(function (tabsFlag) {
-      tabsFlag.classList.remove('flag--focused')
+      tabsFlag.classList.remove('flag:focus::after')
     });
-    event.currentTarget.classList.add('flag--focused')
+    event.currentTarget.classList.add('flag:focus::after')
     document.querySelectorAll('.catalog-main').forEach(function (tabContent) {
       tabContent.classList.remove('tab-content-active')
     })
@@ -95,7 +95,8 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     document.querySelectorAll('.catalog-main__descr').forEach(function (hideDescr) {
       hideDescr.classList.remove('catalog-main__descr--shown')
     })
-    document.querySelector(`[data-target="${path}"]`).firstElementChild.classList.add('catalog-main__descr--shown')
+    document.querySelector(`[data-target="${path}"]`).firstElementChild.classList.add('catalog-main__descr--shown');
+    document.querySelector(`[data-target="${path}"]`).closest('.catalog-names__item').classList.add('catalog-names__item--focused')    
   })
 })
 
@@ -190,8 +191,13 @@ function init() {
   myMap.behaviors.disable('scrollZoom');
 }
 
-if (screen.width < 1024) {
-  document.querySelector('.event:nth-child(3)').classList.add('event-hidden');
+function addEvent() {
+  if (screen.width <= 768) {
+    document.querySelector('.event:nth-child(3)').classList.add('event-hidden');
+  }  
+  if (screen.width > 768) {
+    document.querySelector('.event:nth-child(3)').classList.remove('event-hidden');
+  }  
 }
 
 const slider = document.querySelector('.slider-container');
@@ -256,6 +262,7 @@ function pubSliderDestroy() {
       },
     });
     document.querySelector('.swiper-container2').classList.remove('swiper-no-swiping');
+    document.querySelectorAll('.public-slide').forEach(el => {el.classList.remove('.swiper-slide')});
   }
   pubSlider.dataset.mobile = 'false';
   if (window.innerWidth < 576) {
@@ -271,10 +278,12 @@ function pubSliderDestroy() {
 window.addEventListener('resize', () => {
   mobileSlider();
   pubSliderDestroy();
+  addEvent();
 });
 
 mobileSlider();
 pubSliderDestroy();
+addEvent();
 
 tippy('#projects__tooltop1', {
   content: 'Пример современных тенденций - современная методология разработки',
@@ -289,4 +298,24 @@ tippy('#projects__tooltop2', {
 tippy('#projects__tooltop3', {
   content: 'В стремлении повысить качество',
   theme: 'project',
+});
+
+new JustValidate('.contacts-form', {
+  rules: {
+    name: {
+      required: true,
+      maxLength: 15,
+      minLength: 3
+    },
+    tel: {
+      required: true
+    },
+  },
+  messages: {
+    name: {
+      minLength: 'Недопустимый формат',
+      maxLength: 'Недопустимый формат'
+    },
+    tel:'Введите номер телефона',
+  },
 });
