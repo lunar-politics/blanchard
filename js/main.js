@@ -85,9 +85,9 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     });
     const path = event.currentTarget.dataset.path;
     document.querySelectorAll('.flag').forEach(function (tabsFlag) {
-      tabsFlag.classList.remove('flag:focus::after')
+      tabsFlag.classList.remove('flag--focused')
     });
-    event.currentTarget.classList.add('flag:focus::after')
+    event.currentTarget.classList.add('flag--focused')
     document.querySelectorAll('.catalog-main').forEach(function (tabContent) {
       tabContent.classList.remove('tab-content-active')
     })
@@ -174,17 +174,17 @@ ymaps.ready(init);
 
 function init() {
   var myMap = new ymaps.Map("map", {
-    center: [55.76780602902965,37.624131849997866],
+    center: [55.75846806898367,37.60108849999989],
     zoom: 14
   });
-  myPlacemark1 = new ymaps.Placemark([55.75846306898368,37.601079499999905], {
+  myPlacemark1 = new ymaps.Placemark([55.7583831951044,37.601026276622015], {
 
     hintContent: 'Метка'
   }, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/yandex-mark.png',
+    iconImageHref: '../img/yandex-mark.svg',
     iconImageSize: [20, 20],
-    iconImageOffset: [-3, -42]
+    iconImageOffset: [-5, -5]
   });
   myMap.geoObjects
     .add(myPlacemark1);
@@ -262,7 +262,6 @@ function pubSliderDestroy() {
       },
     });
     document.querySelector('.swiper-container2').classList.remove('swiper-no-swiping');    
-		// document.querySelector('.swiper-container2').classList.remove('swiper-container2');
   }
   pubSlider.dataset.mobile = 'false';
   if (window.innerWidth < 576) {
@@ -305,7 +304,8 @@ new JustValidate('.contacts-form', {
     name: {
       required: true,
       maxLength: 15,
-      minLength: 3
+      minLength: 3,
+      required: true
     },
     tel: {
       required: true
@@ -314,7 +314,8 @@ new JustValidate('.contacts-form', {
   messages: {
     name: {
       minLength: 'Недопустимый формат',
-      maxLength: 'Недопустимый формат'
+      maxLength: 'Недопустимый формат',
+      required: 'Введите имя'
     },
     tel:'Введите номер телефона',
   },
