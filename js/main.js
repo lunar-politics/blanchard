@@ -85,9 +85,10 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     });
     const path = event.currentTarget.dataset.path;
     document.querySelectorAll('.flag').forEach(function (tabsFlag) {
+      tabsFlag.classList.remove('flag:focus::after');
       tabsFlag.classList.remove('flag--focused')
     });
-    event.currentTarget.classList.add('flag--focused')
+    event.currentTarget.classList.add('flag:focus::after')
     document.querySelectorAll('.catalog-main').forEach(function (tabContent) {
       tabContent.classList.remove('tab-content-active')
     })

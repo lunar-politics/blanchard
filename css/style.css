@@ -963,7 +963,7 @@ p {
     opacity: 0;
     transition: opacity .3s ease-in-out;
 }
-.flag.focus-visible::after
+.flag:focus::after
  {
     outline: none;
     opacity: 1;
@@ -1100,7 +1100,7 @@ p {
     transition: transform 0.3s ease-in-out;
 }
 
-.ui-accordion .ui-accordion-header:focus {
+.ui-accordion .ui-accordion-header.focus-visible {
     outline: none;
     color:white;
 }
