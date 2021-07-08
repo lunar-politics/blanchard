@@ -1,3 +1,5 @@
+document.querySelector('.flag__it').classList.add('flag:focus::after');
+
 const menuItem = document.querySelectorAll('.second-nav__item');
 const item = document.querySelectorAll('.second-nav__submenu');
 menuItem.forEach(el => {
@@ -85,8 +87,7 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     });
     const path = event.currentTarget.dataset.path;
     document.querySelectorAll('.flag').forEach(function (tabsFlag) {
-      tabsFlag.classList.remove('flag:focus::after');
-      tabsFlag.classList.remove('flag--focused')
+      tabsFlag.classList.remove('flag:focus::after')
     });
     event.currentTarget.classList.add('flag:focus::after')
     document.querySelectorAll('.catalog-main').forEach(function (tabContent) {

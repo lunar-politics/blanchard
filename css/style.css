@@ -933,6 +933,7 @@ p {
 
 .flag {
     display: inline-block;
+    position: relative;
     padding: 0;
     width: 46px;
     height: 46px;
@@ -969,9 +970,10 @@ p {
     opacity: 1;
 }
 
+/* 
 .flag--focused {
     box-shadow: 0 0 0 8px #fff, 0 0 0 10px var(--bright) !important;
-}
+} */
 
 .flag:hover, .flag.focus-visible {
     box-shadow: 0px 0px 20px rgba(157, 92, 208, 0.7);
@@ -1100,7 +1102,7 @@ p {
     transition: transform 0.3s ease-in-out;
 }
 
-.ui-accordion .ui-accordion-header.focus-visible {
+.catalog-main .ui-accordion .accordeon-item .ui-accordion-header.focus-visible {
     outline: none;
     color:white;
 }
@@ -1150,7 +1152,7 @@ p {
 .ui-accordion-header-active  {
     border-top: 1px solid var(--active) !important;
     border-bottom: 1px solid var(--active) !important;
-    color: var(--active) !important; 
+    color: var(--active) ; 
 }
 
 .ui-state-active .ui-icon, .ui-button:active .ui-icon {
