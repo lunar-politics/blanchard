@@ -1116,18 +1116,6 @@ p {
     transition: transform 0.3s ease-in-out;
 }
 
-.catalog-main .ui-accordion .accordeon-item .ui-accordion-header.focus-visible {
-    outline: none;
-    color:white;
-}
-
-.ui-accordion .ui-accordion-header.focus-visible::after {
-    transform: scaleX(1) translateY(-50%);
-}
-
-.ui-accordion .ui-accordion-header:hover {
-    
-}
 
 .ui-corner-all,
 .ui-corner-top,
@@ -1156,6 +1144,16 @@ p {
     border-bottom: 1px solid var(--bright) !important;
     color: var(--bright);
 }
+
+.catalog-main .ui-accordion .accordeon-item .ui-accordion-header.focus-visible {
+    outline: none;
+    color:white !important;
+}
+
+.ui-accordion .ui-accordion-header.focus-visible::after {
+    transform: scaleX(1) translateY(-50%);
+}
+
 
 .ui-accordion .ui-accordion-header:hover .ui-accordion-header-icon {
     background-color: var(--btn-border);
