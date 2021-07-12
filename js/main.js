@@ -118,6 +118,7 @@ document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
 
 $(function () {
   $(".catalog-main__accordion").accordion({
+    heightStyle: "content"
   });
 });
 

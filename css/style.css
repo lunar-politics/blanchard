@@ -1072,7 +1072,23 @@ p {
 }
 
 .accordeon-item {
-    margin-top: -2px;
+    margin-top: -1px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid #cacaca;
+    transition: border .3s ease-in-out;
+}
+
+.accordeon-item:first-child {
+    border-top: 1px solid #cacaca;
+}
+
+.accordeon-item:hover {
+    border-top: 1px solid var(--bright);
+    border-bottom: 1px solid var(--bright);
+}
+
+.accordeon-item:hover .catalog-main__dates {
+    color: var(--bright);
 }
 
 .ui-icon,
@@ -1087,21 +1103,25 @@ p {
     background-position: center center;
     background-size: auto;
     background-repeat: no-repeat;
+    transition: background-color .3s ease-in-out;
 }
 
 .ui-accordion .ui-accordion-header {
     position: relative;
     padding: 1.7em .5em 1.7em 0;
     margin: 0;
-    outline: none;
+    margin-top: -2px;    
+    outline: none;    
+    border: none;
     font-size: 25px;
     z-index: 1;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, border .3s ease-in-out;
 }
 
-.accordeon-item:not(:last-child) .ui-accordion-header{    
+/* .accordeon-item:not(:last-child) .ui-accordion-header{    
     border-bottom: none;
-}
+} */
+
 
 .ui-accordion .ui-accordion-header::after {
     content: "";
@@ -1139,11 +1159,12 @@ p {
     transition: border .3s ease-in-out, color .3s ease-in-out;
 }
 
-.ui-accordion .ui-accordion-header:hover {
-    border-top: 1px solid var(--bright);
-    border-bottom: 1px solid var(--bright) !important;
-    color: var(--bright);
+.catalog-main__dates {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
 }
+
 
 .catalog-main .ui-accordion .accordeon-item .ui-accordion-header.focus-visible {
     outline: none;
@@ -1179,16 +1200,12 @@ p {
     transform: rotate(180deg);
 }
 
-.ui-state-active .ui-accordion-header-icon {
-    transition: background-image .3s ease-in-out;
-}
-
 .ui-accordion .ui-accordion-header:active .ui-accordion-header-icon {
     background-color: var(--btn-border);
     border: 2px solid var(--bright);
 }
 
-.ui-state-active,
+/* .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
 a.ui-button:active,
@@ -1199,7 +1216,7 @@ a.ui-button:active,
     border-left: none;
     border-right: none;
     border-color: #cacaca;
-}
+} */
 
 .ui-state-active,
 .ui-widget-content .ui-state-active,
@@ -1269,11 +1286,6 @@ a.ui-button:active,
     color: var(--active);
 }
 
-.catalog-main__dates {
-    font-size: 24px;
-    font-weight: 600;
-}
-
 .catalog-main__names {
     margin-top: 0;
     margin-bottom: 0;
@@ -1292,7 +1304,6 @@ a.ui-button:active,
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
     background-color: transparent;
-    color: var(--text-color);
     border-left: none;
     border-right: none;
 }
@@ -1564,24 +1575,28 @@ html .ui-button.ui-state-disabled:active {
     padding: 0 10px;
 }
 
-.publications-range__from+input {
+.first-price {
     padding: 0 0 0 10px;
     width: 75px;
     height: 100%;
     color: var(--usu);
     background-color: rgba(157, 92, 208, 0.5);
     border: none;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
 }
 
-.publications-range__from+input:hover {
+.first-price:hover,
+.last-price:hover {
     background-color: var(--bright);
 }
 
-.publications-range__from+input.focus-visible {
+.first-price.focus-visible,
+.last-price.focus-visible {
     outline: 1px solid var(--usu);
 }
 
-.publications-range__from+input:active {
+.first-price:active,
+.last-price:active {
     background-color: var(--active);
 }
 
@@ -1589,13 +1604,14 @@ html .ui-button.ui-state-disabled:active {
     padding: 0 9px;
 }
 
-.publications-range__to+input {
+.last-price {
     padding: 0 10px;
     width: 73px;
     height: 100%;
     color: var(--usu);
     background-color: rgba(157, 92, 208, 0.5);
     border: none;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
 }
 
 .publications-range__rub {
