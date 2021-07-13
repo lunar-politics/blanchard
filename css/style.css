@@ -1802,7 +1802,7 @@ html .ui-button.ui-state-disabled:active {
     color: var(--bright);
     padding: 3px;
     border: 2px solid transparent;
-    transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out, border .3s ease-in-out;
 }
 
 .projects-link::after {
@@ -1859,7 +1859,7 @@ html .ui-button.ui-state-disabled:active {
     height: 150px;
     filter: grayscale(100%);
     opacity: 0.5;
-    transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out, filter .3s ease-in-out;
 }
 
 .partners-list__img {
@@ -1950,6 +1950,7 @@ html .ui-button.ui-state-disabled:active {
     border-color: #333333;
     border-width: 1px;
     outline: none;
+    transition: background-color .3s ease-in-out;
 }
 
 .contacts-form__name:hover, .contacts-form__tel:hover {

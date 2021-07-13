@@ -8,6 +8,14 @@ menuItem.forEach(el => {
   });
 });
 
+document.querySelectorAll('.catalog-main__dates').forEach(el => {
+  if (el.classList.contains('ui-accordion-header-active')) {
+      console.log('1');
+      e.currentTarget.closest('.accordeon-item').style.borderTop = "none";
+    }
+})
+
+
 document.addEventListener('click', (e) =>  {
   if (!e.target.classList.contains('second-nav-list__item') && !e.target.classList.contains('second-nav__submenu') && !e.target.classList.contains('second-nav__item')) {
         item.forEach(el => {el.classList.remove('toggle-visibility')});
@@ -100,7 +108,6 @@ document.querySelectorAll('.flag').forEach(function (tabsFlag) {
     document.querySelector(`[data-target="${path}"]`).firstElementChild.classList.add('catalog-main__descr--shown');
   })
 })
-
 
 document.querySelectorAll('.catalog-names__item').forEach(function(showDescr) {
   showDescr.addEventListener('click', function(event) {
